@@ -7,30 +7,38 @@ export default function Home() {
     navigate("/2048");
   };
 
-  const goToTicTacToe = () => {
-    navigate("/tic-tac-toe");
-  };
+ 
 
   const goToMemoryGame = () => {
     navigate("/memory-game");
   };
 
+  const goToChronoPhrases = () => {
+    navigate("/chrono-phrases");
+  }
+
+  const goToRushHour = () => {
+    navigate("/rush-hour");
+  }
+  
   const games = [
     {
       nom: "2048",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReMzylExBcrVBd2SbSb_k6pd9RNK0MK6Ib3yuUjyrfqw&s=10",
     },
 
-    //Jeu Tic Tac Toe (Morpion)
-    {
-      nom: "Tic Tac Toe",
-      img: "https://media.istockphoto.com/id/1199026285/fr/photo/jeu-de-tic-tac-toe.webp?a=1&b=1&s=612x612&w=0&k=20&c=h-DYFrxRXHHbzRKJM04umI9gVFKfazAwh7K43zY9fOw=",
-    },
-
     // Jeu Mémoire de Cartes
     {
-      nom: "Mémoire de Cartes",
+      nom: "Jeu de Mémoire",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJtIsv4PMb68gVExy76J62a7xyGX9-yG9Gk384gJgyQ&s=10",
+    },
+    {
+      nom: "Jeu Chrono de Phrase",
+      img: `${import.meta.env.BASE_URL}chrono_phrases.jpg`,
+    },
+    {
+      nom: "Rush Hour",
+      img: `${import.meta.env.BASE_URL}rush_hour.jpg`,
     },
   ];
 
@@ -45,9 +53,11 @@ export default function Home() {
             onClick={
               game.nom === "2048"
                 ? goToGame2048
-                : game.nom === "Tic Tac Toe"
-                  ? goToTicTacToe
-                  : goToMemoryGame
+                  : game.nom === "Jeu de Mémoire"
+                    ? goToMemoryGame
+                    : game.nom === "Jeu Chrono de Phrase"
+                      ? goToChronoPhrases
+                      : goToRushHour
             }
           >
             {/* 1. L'image en premier */}

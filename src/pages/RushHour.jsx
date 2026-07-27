@@ -1,9 +1,11 @@
 // Page Jeu de Mémoire de Cartes
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import AnimationLoading from "../components/AnimationLoading";
+// import AnimationLoading from "../components/AnimationLoading";
 
-export default function MemoryGame() {
+export default function RushHour() {
+
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-4 md:p-8 flex flex-col items-center">
       {/* En-tête */}
@@ -15,9 +17,9 @@ export default function MemoryGame() {
           <ArrowLeft className="w-5 h-5" />
           <span>Retour</span>
         </Link>
-        <h1 className="text-3xl font-black text-amber-400">Jeu Tic Tac Toe</h1>
+        <h1 className="text-2xl font-black text-amber-400">Jeu Rush Hour</h1>
       </div>
-      <AnimationLoading />
+      {/* <AnimationLoading /> */}
     </div>
   );
 }

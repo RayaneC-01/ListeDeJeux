@@ -57,7 +57,7 @@ export default function AnimationLoading() {
         transition={{ delay: 0.5 }}
         className="mt-6 font-black  tracking-[0.2em] text-slate-400 text-[20px]"
       >
-        Ce jeu arrive très bientôt !!
+        Ce jeu arrive très bientôt !
       </motion.p>
     </div>
   );
